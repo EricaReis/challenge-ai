@@ -78,6 +78,7 @@ export function WebhooksList() {
   }
 
   async function handleGenerateHandler() {
+    console.log(checkedWebhooksIds);
     const response = await fetch('http://localhost:3333/api/generate', {
       method: 'POST',
       body: JSON.stringify({ webhookIds: checkedWebhooksIds }),
